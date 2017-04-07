@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blog</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+  <% if user_signed_in? %>
+    Signed in as <%= current_user.email %>. Not you?<br><br>
+    first_name:<%=current_user.first_name%>
+     last_name:<%=current_user.last_name%>
+
+    <%= link_to "Sign out", destroy_user_session_path, :method => :delete %><br>
+  <% else %>
+    <%= link_to "Sign up", new_user_registration_path %> or <%= link_to "sign in", new_user_session_path %>
+  <% end %>
+</div>
+
+  ||<%=link_to 'Home','/'%>|| 
+   <%=link_to 'Articles','/articles'%>|| 
+    <%=link_to 'blobs','/blobs'%>|| 
+
+   <%=link_to 'contractus','/contractus'%>|| 
+
+   <%=link_to 'Aboutus','/aboutus'%><br><br>
+
+   <p class="notice"><%=notice%></p>
+    <p class="alert"><%=alert%></p>
+
+   <%= flash[:notice] %>
+    <%= yield %>
+  </body>
+</html>

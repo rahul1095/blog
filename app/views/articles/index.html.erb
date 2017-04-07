@@ -1,0 +1,32 @@
+
+    <%= stylesheet_link_tag    'articles' %>
+
+<h1>Listing articles</h1>
+
+<table >
+  <tr>
+    <th>Title</th>
+
+    <th>Text</th>
+  </tr>
+  <% @articles.each do |article| %>
+  <tr>
+    <td><%= article.title %></td>
+    <td><%= article.text %></td>
+
+    <td><%= link_to 'Show', article_path(article) %></td>
+    <td><%= link_to 'Edit', edit_article_path(article) %></td>
+    <td><%= link_to 'Destroy', article_path(article),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+  <% end %>
+</table>
+
+
+<div class=""><%= link_to 'New article', new_article_path %></div>
+
+
+<p class="article_heading">Hello World!</p>
+<p id="article_para">This paragraph is not affected by the style.</p>
+

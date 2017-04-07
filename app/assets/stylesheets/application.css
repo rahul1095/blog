@@ -1,0 +1,72 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+ *= require_self
+ */
+
+ table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+<th colspan="2">Telephone</th>
+table {
+    border-spacing: 15px;
+    }
+th, td {
+    padding: 10px;
+}
+th {
+    text-align: left;
+}
+p {
+    color: red;
+    
+}
+p {
+     /*font-family: "Times New Roman", Times, serif;?*/
+}
+
+body {
+    background-color: lightblue;
+} 
+
+#blog h1 {
+    background-color: green;
+}
+
+
+
+div {
+    background-color: blue;
+}
+
+.article_heading {
+	background-color: grey;
+}
+
+#article_para{
+	background-color: yellow;
+}
+
+ /*<head>
+<style>
+body {
+    background-color: linen;
+}
+
+p {
+    color: maroon;
+    margin-left: 40px;
+}
+</style>
+</head>*/

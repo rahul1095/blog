@@ -1,0 +1,19 @@
+<div class="heading active heading1" id="blog">
+  <h1>New article</h1>
+
+</div>
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+  </tr>
+ 
+  <% @blobs.each do |blob| %>
+    <tr>
+      <td><%= blob.title %></td>
+      <td><%= blob.text %></td>
+      <td><%= link_to 'Show', blob_path(blob) %></td>
+    </tr>
+  <% end %>
+</table>
+<%= link_to 'New article', new_blob_path %>

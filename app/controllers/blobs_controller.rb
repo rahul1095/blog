@@ -16,7 +16,12 @@ class BlobsController < ApplicationController
 	  	 @blobs=Blob.all
 
 	  end
-	  private
+
+  def my_profile
+
+  end
+   
+	private
   def blob_params
     params.require(:blob).permit(:title, :text)
   end
